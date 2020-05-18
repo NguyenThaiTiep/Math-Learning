@@ -1,4 +1,3 @@
-const db = require('./../Database/database')
 const ls = require('local-storage')
 
 module.exports.getUFO = (req, res) => {
