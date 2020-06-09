@@ -1,15 +1,15 @@
-const sql = require('mysql');
+var mysql = require('mysql');
 
-var db = sql.createConnection({
-    host: 'remotemysql.com',
-    user: "StdK55tiWs",
-    password: 'Tg5Ot2WVbn',
-    database: 'StdK55tiWs'
-})
-db.connect((err) => {
-    if (err) throw err;
-    else {
-        console.log("Connected database...")
-    }
-})
-module.exports = db;
+var pool = mysql.createPool({
+    host: process.env.HOST,
+    user: process.env.USER,
+    password: process.env.PASSWORD,
+    database: process.env.DATABASE
+});
+
+pool.getConnection(function(err, connection) {
+    console.log(err);
+    connection.destroy();
+});
+//sao day
+module.exports = pool;
