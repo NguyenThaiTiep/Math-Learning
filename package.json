@@ -5,8 +5,9 @@
     "main": "index.js",
     "scripts": {
         "lint": "eslint app",
-        "start": "nodemon app",
-        "test": "mocha test/testJS.game.js"
+        "dev": "nodemon app",
+        "test": "mocha test/testJS.game.js",
+        "start": "node app.js"
     },
     "repository": {
         "type": "git",
