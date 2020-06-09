@@ -1,10 +1,9 @@
-var mysql = require('mysql');
-
+const mysql = require('mysql');
 var pool = mysql.createPool({
-    host: process.env.HOST,
-    user: process.env.USER,
-    password: process.env.PASSWORD,
-    database: process.env.DATABASE
+    host: 'remotemysql.com',
+    user: "StdK55tiWs",
+    password: 'Tg5Ot2WVbn',
+    database: 'StdK55tiWs'
 });
 
 pool.getConnection(function(err, connection) {
