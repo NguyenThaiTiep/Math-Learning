@@ -2,7 +2,7 @@ const express = require('express');
 var bodyParser = require('body-parser')
 const cookieParser = require('cookie-parser');
 var app = express()
-
+require('dotenv/config')
 const db = require("./Database/database")
 const userRoute = require('./routes/userRouter')
 const ScreenRoute = require('./routes/ScreenRouter')
@@ -27,4 +27,5 @@ app.use('/', AuthRoute);
 
 app.listen(port, function() {
     console.log("Server is listening port " + port);
+    // liiii
 })
