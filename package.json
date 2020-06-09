@@ -8,6 +8,7 @@
         "dev": "nodemon app",
         "test": "mocha test/testJS.game.js",
         "start": "node app"
+
     },
     "repository": {
         "type": "git",
